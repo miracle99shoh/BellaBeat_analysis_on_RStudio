@@ -16,5 +16,5 @@
 <h2>Analysis and Visualization walk-through:</h2>
 
 <p align="left">
-Step-by-step analysis can be through this<a href="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/1-case_study_2_bellabeat_html_to_pdf_1page.pdf">PDF file</a>
+Step-by-step analysis can be through this<a href="1-case_study_2_bellabeat_html_to_pdf_1page.pdf"> PDF file</a>
 <br />
