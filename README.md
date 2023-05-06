@@ -13,69 +13,23 @@
 
 - <b>Windows 10</b> (21H2)
 
+# Conclusion
+
+Based on the analysis we have done with the help of given data, I can provide some **recommendations**:
+
+-   **Daily notifications** -\> We classified users into 4 categories and saw that the average of users walk more than 7,500 steps daily besides Sundays. We can encourage users to reach at least daily recommended 8000 steps sending them alarms if they haven't reached the steps and creating also posts on our app explaining the benefits of reaching that goal. We also saw a positive correlation between steps and calories. Moreover, we detected that users get sleep less than 8 hours a day. They could set up a desired time to go to sleep and receive a notification minutes before to prepare to sleep.
+-   **Reward based competition** -\> We are aware that some people don't get motivated by notifications so we could create a kind of competition among BellaBeat users. After they agree to participate in the competition, users will be able to see how well other users are doing and get motivated to reach higher levels and users would get online badges as they reach certain level.
+
+On our analysis we didn't just check trends on daily users habits we also realized that just 50% of the users use their device on a daily basis and that just 36% of the users wear the device all time the day they used it. We can continue promote Bellabeat's products features: ***Water-resistant & Long-lasting batteries & Elegant design***
+
+We can forward our marketing focus on the characteristic that people can wear the product anytime to any occasion.
+
 <h2>Analysis and Visualization walk-through:</h2>
- This is the analysis project about high-tech manufacturer of health products for women. The smart device collects the data and send it to the app on users’ smartphones and to the main database of the company. We are going to conduct an analysis using that dataset to identify trends and relationships to target customers with clear marketing strategies.
 <p align="left">
-<h2> This is the summary of the analysis and Step-by-step analysis can be through this<a href="1-case_study_2_bellabeat_html_to_pdf_1page.pdf"> PDF file</a> </h2>
-<br />
-
-
-
-
-After long research, here is the conclusion I came up with: <br/>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_1.png"/>
-<br />
-<br />
-Here is the list of libraries and tools I used in RStudio for the analysis:  <br/>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_2.png"/>
-<br />
-<br />
-<h3> These are some examples of plots and graphs I used :  <br/>
-SAMPLE-1 </ h3>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_3.png"/>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_4.png"/>
-<br />
-<br/>
-<h3> SAMPLE-2 </h3>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_5.png"/>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_6.png"/>
-<br />
-<br/>
-<h3> SAMPLE-3 </h3>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_7.png"/>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_8.png"/>
-<br />
-<br/>
-<h3> SAMPLE-4 </h3>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_9.png"/>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_10.png"/>
-<br />
-<br/>
-<h3> SAMPLE-5 </h3>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_101.png"/>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_102.png"/>
-<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_11.png"/>
-<br />
-<h2> Thorough analysis is here in this <a href="1-case_study_2_bellabeat_html_to_pdf_1page.pdf"> PDF file</a> </h2>
-
-
-
-
-
----
-title: "Bella beat analysis"
-output:
-  pdf_document: default
-  RMarkdown: default
-  html_document:
-    df_print: paged
----
 
 # Bellabeat Analysis
 
 ### This is the analysis project about high-tech manufacturer of health products for women. The smart device collects the data and send it to the app on users' smartphones and to the main database of the company. We are going to conduct an analysis using that dataset to identify trends and relationships to target customers with clear marketing strategies.
-
-I already downloaded the dataset so I can use data easily since I am using RStudio. The dataset can be found [here on my Kaggle](https://www.kaggle.com/datasets/shokirjonotamirzaev/bellabeat-marketing-analysis).
 
 # 1. Prepare
 
@@ -343,6 +297,7 @@ hourly_steps %>%
   scale_fill_gradient(low = "red", high = "green")+
   theme(axis.text.x = element_text(angle = 90))
 ```
+<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_8.png"/>
 
 We can confirm from the graph that users are more active during the day (8am and 7pm) and the most active hours corresponds to lunch time 12pm\~2pm, as well as, evening of 5pm\~7pm.
 
@@ -366,6 +321,7 @@ ggplot(daily_activity_sleep, aes(x=totalsteps, y=calories))+
         plot.title = element_text(size = 14))
 )
 ```
+<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_9.png"/>
 
 Insights from plots:
 
@@ -439,6 +395,7 @@ daily_use_percentage %>%
                                  "Low use - 1 to 10 days"))+
   labs(title = "Daily use of smart device")
 ```
+<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_10.png"/>
 
 After analyzing our results we can say that:
 
@@ -613,6 +570,7 @@ ggarrange(   # it combines 3 separate graphs of 'high', 'mod', 'low'
   ncol = 3), # end of combining 3 small separate plots
   nrow = 2) # end of combining total + 3 separate small plots
 ```
+<img src="https://github.com/miracle99shoh/BellaBeat_analysis_on_RStudio/blob/main/BellaBeat_rstudio_analusis_parts_11.png"/>
 
 Per our plots we can see that 36% of the total of users wear the device all day long, 60% more than half day long and just 4% less than half day.
 
@@ -630,13 +588,3 @@ Moderate users are the ones who wear the device less on a daily basis.
 
 Being low users who wear more time their device the day they use it.
 
-# Conclusion
-
-Based on the analysis we have done with the help of given data, I can provide some **recommendations**:
-
--   **Daily notifications** -\> We classified users into 4 categories and saw that the average of users walk more than 7,500 steps daily besides Sundays. We can encourage users to reach at least daily recommended 8000 steps sending them alarms if they haven't reached the steps and creating also posts on our app explaining the benefits of reaching that goal. We also saw a positive correlation between steps and calories. Moreover, we detected that users get sleep less than 8 hours a day. They could set up a desired time to go to sleep and receive a notification minutes before to prepare to sleep.
--   **Reward system** -\> We are aware that some people don't get motivated by notifications so we could create a kind of competition among BellaBeat users. After they agree to participate in the competition, users will be able to see how well other users are doing and get motivated to reach higher levels and users would get online badges as they reach certain level.
-
-On our analysis we didn't just check trends on daily users habits we also realized that just 50% of the users use their device on a daily basis and that just 36% of the users wear the device all time the day they used it. We can continue promote Bellabeat's products features: ***Water-resistant & Long-lasting batteries & Elegant design***
-
-We can forward our marketing focus on the characteristic that people can wear the product anytime to any occasion.
